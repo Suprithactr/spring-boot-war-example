@@ -24,7 +24,7 @@ pipeline {
         stage("Deploy on Test"){
             steps{
                 // deploy on container -> plugin
-                deploy adapters: [tomcat9(credentialsId: 'Tomcat', path: '', url: 'http://15.206.92.159:8080')], contextPath: '/test', war: '**/*.war'
+                deploy adapters: [tomcat9(credentialsId: 'supritha', path: '', url: 'http://15.206.92.159:8080')], contextPath: '/test', war: '**/*.war'
               
             }
             
@@ -37,7 +37,7 @@ pipeline {
             
             steps{
                 // deploy on container -> plugin
-                deploy adapters: [tomcat9(credentialsId: 'Tomcat', path: '', url: 'http://15.206.92.159:8080')], contextPath: '/prod', war: '**/*.war'
+                deploy adapters: [tomcat9(credentialsId: 'supritha', path: '', url: 'http://15.206.92.159:8080')], contextPath: '/prod', war: '**/*.war'
 
             }
         }
@@ -47,7 +47,7 @@ pipeline {
             echo "========always========"
         }
         success{
-            echo "========pipeline executed successfully rani supritha ========"
+            echo "========pipeline executed successfully supritha ========"
 
         }
         failure{
